@@ -1,6 +1,6 @@
-# G5FacebookApiClient
+# G5 Facebook Api Client
 
-TODO: Write a gem description
+[WIP] Facebook Graph API Ruby client for G5 apps
 
 ## Installation
 
@@ -18,9 +18,11 @@ Or install it yourself as:
 
     $ gem install g5_facebook_api_client
 
+
 ## Usage
 
 TODO: Write usage instructions here
+
 
 ## Contributing
 
