@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/oauth/access_token?client_id=121584141274833&client_secret=b0d3826624470f5f5c3e70ce70893ed4&grant_type=client_credentials
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Facebook-Api-Version:
+      - v1.0
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1528169'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - tB3Fleg4WIvUptu40ZoA1j9SBXJIzxgwDNSJNcWwNWF/VSDTEbakK+ySXdKdB19AMziXPTQOxkej7kg4qvmCwQ==
+      Date:
+      - Thu, 11 Dec 2014 17:19:21 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '56'
+    body:
+      encoding: UTF-8
+      string: access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q
+    http_version: 
+  recorded_at: Thu, 11 Dec 2014 17:19:22 GMT
+recorded_with: VCR 2.9.3
