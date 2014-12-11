@@ -6,4 +6,5 @@ require "g5_facebook_api_client/access_token"
 module G5FacebookApiClient
   ENDPOINT = "https://graph.facebook.com"
   API_VERSION = "v2.2"
+  BASE_URI = "#{ENDPOINT}/#{API_VERSION}"
 end
