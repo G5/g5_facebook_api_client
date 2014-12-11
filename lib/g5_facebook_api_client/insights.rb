@@ -1,23 +1,28 @@
 class G5FacebookApiClient::Insights
   RESOURCE = "insights"
 
-  def initialize(client_id=nil, client_secret=nil)
-    @client_id = client_id || "121584141274833"
-    @client_secret = client_secret || "b0d3826624470f5f5c3e70ce70893ed4"
+  def initialize(page, client_id=nil, client_secret=nil)
+    @page = page
+    @client_id = client_id || ENV["FACEBOOK_ID"]
+    @client_secret = client_secret || ENV["FACEBOOK_SECRET"]
   end
 
-  def page_likes(id)
-    JSON.parse(request(resource("page_fans_locale/lifetime", id)))
+  def page_likes
+    JSON.parse(request(resource("page_fans_locale/lifetime")))
   end
 
-  def page_views(id)
-    JSON.parse(request(resource("page_views", id)))
+  def page_views
+    JSON.parse(request(resource("page_views")))
+  end
+
+  def page_impressions
+    JSON.parse(request(resource("page_impressions")))
   end
 
   private
 
-  def resource(metric, id)
-    "#{id}/#{RESOURCE}/#{metric}?#{access_token}"
+  def resource(metric)
+    "#{@page}/#{RESOURCE}/#{metric}?#{access_token}"
   end
 
   def request(resource)
@@ -25,7 +30,7 @@ class G5FacebookApiClient::Insights
   end
 
   def access_token
-    @access_token ||=
+    #@access_token ||=
       G5FacebookApiClient::AccessToken.new(@client_id, @client_secret).fetch
   end
 end
