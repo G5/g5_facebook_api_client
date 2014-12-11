@@ -1,10 +1,12 @@
 class G5FacebookApiClient::Insights
   RESOURCE = "insights"
 
-  def initialize
-    @client_id     = "121584141274833"
-    @client_secret = "b0d3826624470f5f5c3e70ce70893ed4"
+  def initialize(client_id, client_secret)
+    @client_id     = client_id
+    @client_secret = client_secret
   end
+
+  private
 
   def access_token
     @access_token ||=
