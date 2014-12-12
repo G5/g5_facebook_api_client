@@ -6,10 +6,12 @@ describe G5FacebookApiClient::AccessToken do
   let(:access_token_fetcher) { described_class.new(client_id, client_secret) }
 
   describe "#fetch" do
+    subject { access_token_fetcher.fetch }
+
     context "valid params" do
       it "fetches an access token for a client" do
         VCR.use_cassette("access_token") do
-          expect(access_token_fetcher.fetch).
+          expect(subject).
             to eq("access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q")
         end
       end
@@ -20,7 +22,7 @@ describe G5FacebookApiClient::AccessToken do
 
       it "fetches an access token for a client" do
         VCR.use_cassette("access_token_invalid_client_id") do
-          expect(access_token_fetcher.fetch).to include("OAuthException")
+          expect(subject).to include("OAuthException")
         end
       end
     end
@@ -30,7 +32,7 @@ describe G5FacebookApiClient::AccessToken do
 
       it "fetches an access token for a client" do
         VCR.use_cassette("access_token_invalid_client_secret") do
-          expect(access_token_fetcher.fetch).to include("OAuthException")
+          expect(subject).to include("OAuthException")
         end
       end
     end

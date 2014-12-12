@@ -30,7 +30,7 @@ class G5FacebookApiClient::Insights
   end
 
   def access_token
-    #@access_token ||=
+    @access_token ||=
       G5FacebookApiClient::AccessToken.new(@client_id, @client_secret).fetch
   end
 end
