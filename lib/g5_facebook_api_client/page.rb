@@ -1,12 +1,6 @@
 class G5FacebookApiClient::Page < G5FacebookApiClient::Base
   LIMIT = 20
 
-  def initialize(page, client_id=nil, client_secret=nil)
-    @page = page
-    @client_id = client_id || ENV["FACEBOOK_ID"]
-    @client_secret = client_secret || ENV["FACEBOOK_SECRET"]
-  end
-
   def posts
     parse(get(posts_uri))
   end

@@ -4,7 +4,7 @@ describe G5FacebookApiClient::Page do
   let(:page_id) { "GetG5" }
   let(:client_id) { "121584141274833" }
   let(:client_secret) { "b0d3826624470f5f5c3e70ce70893ed4" }
-  let(:page) { described_class.new(page_id, client_id, client_secret) }
+  let(:page) { described_class.new(client_id, client_secret, page_id) }
 
   describe "#posts" do
     subject { VCR.use_cassette("page_posts") { page.posts } }

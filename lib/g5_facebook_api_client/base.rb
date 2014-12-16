@@ -1,7 +1,8 @@
 class G5FacebookApiClient::Base
-  def initialize(client_id=nil, client_secret=nil)
-    @client_id = client_id || ENV["FACEBOOK_ID"]
-    @client_secret = client_secret || ENV["FACEBOOK_SECRET"]
+  def initialize(client_id, client_secret, page=nil)
+    @client_id = client_id
+    @client_secret = client_secret
+    @page = page
   end
 
   def access_token

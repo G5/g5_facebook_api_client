@@ -1,12 +1,6 @@
 class G5FacebookApiClient::Insights < G5FacebookApiClient::Base
   RESOURCE = "insights"
 
-  def initialize(page, client_id=nil, client_secret=nil)
-    @page = page
-    @client_id = client_id || ENV["FACEBOOK_ID"]
-    @client_secret = client_secret || ENV["FACEBOOK_SECRET"]
-  end
-
   def page_likes
     parse(request(resource("page_fans_locale/lifetime")))
   end
