@@ -1,6 +1,6 @@
 # G5 Facebook Api Client
 
-[WIP] Facebook Graph API Ruby client for G5 apps
+Facebook Graph API Ruby client for G5 apps
 
 ## Installation
 
@@ -21,7 +21,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```client_id``` and ```client_secret``` parameters can either be passed to
+the class on instantiation, or set as ```ENV["FACEBOOK_ID"]``` and ```ENV["FACEBOOK_SECRET"]```.
+
+##### User Permissions
+
+
+```ruby
+user = G5FacebookApiClient::User.new("my_client_id", "my_client_secret")
+user.permissions
+```
+
+##### Page Feed
+
+
+```ruby
+page = G5FacebookApiClient::Page.new("my_page_id", my_client_id", "my_client_secret")
+page.posts
+```
 
 
 ## Contributing
