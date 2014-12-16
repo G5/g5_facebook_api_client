@@ -1,4 +1,4 @@
-class G5FacebookApiClient::Insights
+class G5FacebookApiClient::Insights < G5FacebookApiClient::Base
   RESOURCE = "insights"
 
   def initialize(page, client_id=nil, client_secret=nil)
@@ -27,11 +27,6 @@ class G5FacebookApiClient::Insights
 
   def request(resource)
     HTTParty.get(URI::encode("#{G5FacebookApiClient::BASE_URI}/#{resource}")).body
-  end
-
-  def access_token
-    @access_token ||=
-      G5FacebookApiClient::AccessToken.new(@client_id, @client_secret).fetch
   end
 end
 
