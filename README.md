@@ -1,5 +1,8 @@
 # G5 Facebook Api Client
 
+[![Gem Version](https://badge.fury.io/rb/g5_facebook_api_client.svg)](http://badge.fury.io/rb/g5_facebook_api_client)
+[![Build Status](https://travis-ci.org/G5/g5_facebook_api_client.svg?branch=master)](https://travis-ci.org/G5/g5_facebook_api_client.svg?branch=master)
+
 Facebook Graph API Ruby client for G5 apps
 
 ## Installation
