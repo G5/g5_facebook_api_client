@@ -15,12 +15,12 @@ class G5FacebookApiClient::Base
     JSON.parse(body)
   end
 
-  def encode(string)
-    URI::encode(string)
+  def get(url)
+    HTTParty.get(encode(url)).body
   end
 
-  def get(url)
-    HTTParty.get(url).body
+  def encode(string)
+    URI::encode(string)
   end
 end
 

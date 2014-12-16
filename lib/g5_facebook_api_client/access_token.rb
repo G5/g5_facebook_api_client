@@ -2,7 +2,7 @@ class G5FacebookApiClient::AccessToken < G5FacebookApiClient::Base
   RESOURCE = "oauth/access_token"
 
   def fetch
-    get(encode(access_token_uri))
+    get(access_token_uri)
   end
 
   private

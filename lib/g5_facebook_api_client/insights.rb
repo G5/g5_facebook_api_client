@@ -26,7 +26,7 @@ class G5FacebookApiClient::Insights < G5FacebookApiClient::Base
   end
 
   def request(resource)
-    get(encode("#{G5FacebookApiClient::BASE_URI}/#{resource}"))
+    get("#{G5FacebookApiClient::BASE_URI}/#{resource}")
   end
 end
 
