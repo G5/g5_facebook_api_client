@@ -10,3 +10,4 @@ module G5FacebookApiClient
   API_VERSION = "v2.2"
   BASE_URI    = "#{ENDPOINT}/#{API_VERSION}"
 end
+

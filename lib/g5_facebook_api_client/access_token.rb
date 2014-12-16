@@ -13,3 +13,4 @@ class G5FacebookApiClient::AccessToken < G5FacebookApiClient::Base
     "&grant_type=client_credentials"
   end
 end
+

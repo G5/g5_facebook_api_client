@@ -9,3 +9,4 @@ describe G5FacebookApiClient::Insights do
   describe "#page_views" do
   end
 end
+
