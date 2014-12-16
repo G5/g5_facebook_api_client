@@ -28,7 +28,7 @@ the class on instantiation, or set as ```ENV["FACEBOOK_ID"]``` and ```ENV["FACEB
 
 
 ```ruby
-user = G5FacebookApiClient::User.new("my_client_id", "my_client_secret")
+user = G5FacebookApiClient::User.new("client_id", "client_secret")
 user.permissions
 ```
 
@@ -36,8 +36,15 @@ user.permissions
 
 
 ```ruby
-page = G5FacebookApiClient::Page.new("my_page_id", "my_client_id", "my_client_secret")
+page = G5FacebookApiClient::Page.new("page_id", "client_id", "client_secret")
 page.posts
+```
+
+##### Page Insights
+
+
+```ruby
+# Coming Soon
 ```
 
 
