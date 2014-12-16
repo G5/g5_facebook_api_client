@@ -10,12 +10,12 @@ describe G5FacebookApiClient::Page do
     subject { VCR.use_cassette("page_posts") { page.posts } }
 
     it "fetches posts for a page" do
-      expect(subject.size).to eq(20)
+      expect(subject["data"].size).to eq(20)
     end
 
     describe "individual post data" do
       context "a post with no shares" do
-        let(:post) { subject.first }
+        let(:post) { subject["data"].first }
 
         specify { expect(post["shares"]).to be_nil }
         specify { expect(post["message"]).to include("Check out a few G5ers") }
@@ -55,7 +55,7 @@ describe G5FacebookApiClient::Page do
       end
 
       context "a post with no shares" do
-        let(:post) { subject.last }
+        let(:post) { subject["data"].last }
 
         specify { expect(post["shares"]).to eq({ "count" => 1 }) }
       end

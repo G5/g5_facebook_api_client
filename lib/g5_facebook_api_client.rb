@@ -1,4 +1,5 @@
 require "httparty"
+require "pry"
 require "g5_facebook_api_client/base"
 require "g5_facebook_api_client/version"
 require "g5_facebook_api_client/page"
