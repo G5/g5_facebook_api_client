@@ -36,7 +36,7 @@ user.permissions
 
 
 ```ruby
-page = G5FacebookApiClient::Page.new("my_page_id", my_client_id", "my_client_secret")
+page = G5FacebookApiClient::Page.new("my_page_id", "my_client_id", "my_client_secret")
 page.posts
 ```
 
