@@ -10,5 +10,17 @@ class G5FacebookApiClient::Base
     @access_token ||=
       G5FacebookApiClient::AccessToken.new(@client_id, @client_secret).fetch
   end
+
+  def parse(body)
+    JSON.parse(body)
+  end
+
+  def encode(string)
+    URI::encode(string)
+  end
+
+  def get(url)
+    HTTParty.get(url).body
+  end
 end
 

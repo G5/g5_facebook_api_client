@@ -1,13 +1,8 @@
-class G5FacebookApiClient::AccessToken
+class G5FacebookApiClient::AccessToken < G5FacebookApiClient::Base
   RESOURCE = "oauth/access_token"
 
-  def initialize(client_id, client_secret)
-    @client_id = client_id
-    @client_secret = client_secret
-  end
-
   def fetch
-    HTTParty.get(URI::encode(access_token_uri)).body
+    get(encode(access_token_uri))
   end
 
   private
