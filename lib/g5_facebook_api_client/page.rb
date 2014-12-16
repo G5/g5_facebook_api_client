@@ -1,6 +1,9 @@
 class G5FacebookApiClient::Page < G5FacebookApiClient::Base
-  def initialize(page, client_id=nil, client_secret=nil)
+  DEFAULT_LIMIT = 20
+
+  def initialize(page, limit=nil, client_id=nil, client_secret=nil)
     @page = page
+    @limit = limit || DEFAULT_LIMIT
     @client_id = client_id || ENV["FACEBOOK_ID"]
     @client_secret = client_secret || ENV["FACEBOOK_SECRET"]
   end
