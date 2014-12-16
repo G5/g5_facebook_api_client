@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/oauth/access_token?client_id=121584141274833&client_secret=b0d3826624470f5f5c3e70ce70893ed4&grant_type=client_credentials
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Facebook-Api-Version:
+      - v1.0
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1533836'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - UR4gyLZo76XyMkXL+Ma7Cann5wwCqd/rjdaa6fSBrmF1FVboIgOrBv1OVpGjdx7I+/cCMr64X/PTuDGwGRshbQ==
+      Date:
+      - Tue, 16 Dec 2014 16:54:39 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '56'
+    body:
+      encoding: UTF-8
+      string: access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q
+    http_version: 
+  recorded_at: Tue, 16 Dec 2014 16:54:40 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/GetG5/posts?access_token=121584141274833%7CEzolJusCGWQEJt_mnLvlo7Jiz_Q&fields=likes.limit(1).summary(true),shares,message,id,created_time,from&limit=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Facebook-Api-Version:
+      - v1.0
+      Etag:
+      - '"c22a59449dd3538c0668bf0e89b9f45f07d9e13e"'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1533836'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - 7P1ImjSztKgjvc4AjjmmjJA2Chc7LPXOBK1l4dSFjnI6vLGwWX/0R2H/VopTASABu6fC1HFEuD/vzDl5bv/9AA==
+      Date:
+      - Tue, 16 Dec 2014 16:54:40 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2350'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"message":"Check out a few G5ers as they go from baby face
+        to men all for a good cause.\nhttp:\/\/www.getg5.com\/wp-content\/uploads\/2014\/12\/Beards_G5_Movember.gif","id":"15485466463_10152611792811464","created_time":"2014-12-15T21:40:09+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"755437763","name":"Sara
+        Lamb Hobin"}],"paging":{"cursors":{"after":"NzU1NDM3NzYz","before":"NzU1NDM3NzYz"},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152611792811464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=NzU1NDM3NzYz"},"summary":{"total_count":8}}},{"message":"Another
+        fantastic G5 Holiday party! More rockin'' photo booth pictures to come!! abacus
+        | photography IMAGES BY BRIAN J. BULEMORE","id":"15485466463_10152611417311464","created_time":"2014-12-15T17:41:04+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1444093171","name":"Marcy
+        Reich"}],"paging":{"cursors":{"after":"MTQ0NDA5MzE3MQ==","before":"MTQ0NDA5MzE3MQ=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152611417311464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTQ0NDA5MzE3MQ\u00253D\u00253D"},"summary":{"total_count":24}}},{"id":"15485466463_10152611398526464","created_time":"2014-12-15T17:26:42+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"}},{"message":"G5.
+        Year five on Fast 500.\nHas a nice ring to it, huh?\nCongrats, G5ers!\n\nhttp:\/\/www2.deloitte.com\/us\/fast500.html","id":"15485466463_10152587921751464","created_time":"2014-12-02T19:30:47+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1261254935","name":"Scott
+        Rowley"}],"paging":{"cursors":{"after":"MTI2MTI1NDkzNQ==","before":"MTI2MTI1NDkzNQ=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152587921751464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTI2MTI1NDkzNQ\u00253D\u00253D"},"summary":{"total_count":18}}},{"id":"15485466463_10152575436176464","created_time":"2014-11-25T17:12:37+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"}},{"message":"Happy
+        5 year anniversary Nicole M, Tyler J, Nicole S, and Tony G!!","id":"15485466463_10152575420511464","created_time":"2014-11-25T16:58:11+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1103431106","name":"Wanda
+        Pierce Hennesay"}],"paging":{"cursors":{"after":"MTEwMzQzMTEwNg==","before":"MTEwMzQzMTEwNg=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152575420511464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTEwMzQzMTEwNg\u00253D\u00253D"},"summary":{"total_count":40}}},{"message":"Check
+        out these adorable office mates -- Bernie and Ryno!","id":"15485466463_10152563513446464","created_time":"2014-11-18T18:38:06+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1103431106","name":"Wanda
+        Pierce Hennesay"}],"paging":{"cursors":{"after":"MTEwMzQzMTEwNg==","before":"MTEwMzQzMTEwNg=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152563513446464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTEwMzQzMTEwNg\u00253D\u00253D"},"summary":{"total_count":45}}},{"id":"15485466463_10152555447491464","created_time":"2014-11-14T02:02:49+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"}},{"message":"#TBT
+        to the 2007 G5 Christmas Party when there was just a handful of employees.
+        Now we are a big family of 160!!","id":"15485466463_10152554862166464","created_time":"2014-11-13T18:38:21+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1254337094","name":"Kayla
+        Bluhm"}],"paging":{"cursors":{"after":"MTI1NDMzNzA5NA==","before":"MTI1NDMzNzA5NA=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152554862166464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTI1NDMzNzA5NA\u00253D\u00253D"},"summary":{"total_count":14}}},{"shares":{"count":1},"message":"Thank
+        you G5 for letting us bring our pups to work. Especially on 10 degree mornings!","id":"15485466463_10152553183431464","created_time":"2014-11-12T16:47:36+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1254337094","name":"Kayla
+        Bluhm"}],"paging":{"cursors":{"after":"MTI1NDMzNzA5NA==","before":"MTI1NDMzNzA5NA=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152553183431464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTI1NDMzNzA5NA\u00253D\u00253D"},"summary":{"total_count":56}}},{"message":"How
+        does a company raise\/donate close to $4,000 plus over 200 hours of PTO in
+        a couple of months for one of our own? The G5 way of course! #kenziekickscancer","id":"15485466463_10152542479466464","created_time":"2014-11-06T16:41:26+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1103431106","name":"Wanda
+        Pierce Hennesay"}],"paging":{"cursors":{"after":"MTEwMzQzMTEwNg==","before":"MTEwMzQzMTEwNg=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152542479466464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTEwMzQzMTEwNg\u00253D\u00253D"},"summary":{"total_count":54}}},{"message":"No
+        Shave November at G5 - Before pictures.....check back at the end of the month
+        for the after photos!!","id":"15485466463_10152539520161464","created_time":"2014-11-04T22:42:34+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1802093279","name":"Tracy
+        Fox"}],"paging":{"cursors":{"after":"MTgwMjA5MzI3OQ==","before":"MTgwMjA5MzI3OQ=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152539520161464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTgwMjA5MzI3OQ\u00253D\u00253D"},"summary":{"total_count":15}}},{"message":"Another
+        fabulous G5 Halloween Party!","id":"15485466463_10152537861946464","created_time":"2014-11-03T23:11:28+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"1229755208","name":"Cody
+        Moulton"}],"paging":{"cursors":{"after":"MTIyOTc1NTIwOA==","before":"MTIyOTc1NTIwOA=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152537861946464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTIyOTc1NTIwOA\u00253D\u00253D"},"summary":{"total_count":19}}},{"message":"Thanks
+        Manzama for a great game of kickball!!","id":"15485466463_10152528797191464","created_time":"2014-10-29T20:26:02+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"553585920","name":"Laura
+        Jean Manor"}],"paging":{"cursors":{"after":"NTUzNTg1OTIw","before":"NTUzNTg1OTIw"},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152528797191464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=NTUzNTg1OTIw"},"summary":{"total_count":22}}},{"id":"15485466463_10152527318146464","created_time":"2014-10-28T21:42:55+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"}},{"shares":{"count":1},"message":"G5
+        Commitment Ceremony for our new Core Values!","id":"15485466463_10152520237556464","created_time":"2014-10-24T18:12:06+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"5112876","name":"Gail
+        Lovelace Menasco"}],"paging":{"cursors":{"after":"NTExMjg3Ng==","before":"NTExMjg3Ng=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152520237556464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=NTExMjg3Ng\u00253D\u00253D"},"summary":{"total_count":15}}},{"message":"#tbt
+        Halloween at G5. Stay tuned for the the 2014 Vintage Scary Costume Party pictures!","id":"15485466463_10152518844406464","created_time":"2014-10-23T22:11:59+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"100000128497881","name":"Tylara
+        Fyre"}],"paging":{"cursors":{"after":"MTAwMDAwMTI4NDk3ODgx","before":"MTAwMDAwMTI4NDk3ODgx"},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152518844406464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=MTAwMDAwMTI4NDk3ODgx"},"summary":{"total_count":20}}},{"id":"15485466463_10152504510841464","created_time":"2014-10-15T16:01:13+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"}},{"id":"15485466463_10152504466391464","created_time":"2014-10-15T15:24:18+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"5112876","name":"Gail
+        Lovelace Menasco"}],"paging":{"cursors":{"after":"NTExMjg3Ng==","before":"NTExMjg3Ng=="},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152504466391464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=NTExMjg3Ng\u00253D\u00253D"},"summary":{"total_count":14}}},{"shares":{"count":1},"message":"G5
+        showing our \"pink\" spirit and supporting those fighting breast cancer!","id":"15485466463_10152504450701464","created_time":"2014-10-15T15:11:08+0000","from":{"category":"Local
+        business","category_list":[{"id":"187133811318958","name":"Business Services"}],"name":"G5","id":"15485466463"},"likes":{"data":[{"id":"606221998","name":"Karla
+        S. Sosa-Ochoa"}],"paging":{"cursors":{"after":"NjA2MjIxOTk4","before":"NjA2MjIxOTk4"},"next":"https:\/\/graph.facebook.com\/v1.0\/15485466463_10152504450701464\/likes?limit=1&summary=true&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&after=NjA2MjIxOTk4"},"summary":{"total_count":70}}}],"paging":{"previous":"https:\/\/graph.facebook.com\/v1.0\/15485466463\/posts?fields=likes.limit\u0025281\u002529.summary\u002528true\u002529,shares,message,id,created_time,from&limit=20&since=1418679609&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&__previous=1","next":"https:\/\/graph.facebook.com\/v1.0\/15485466463\/posts?fields=likes.limit\u0025281\u002529.summary\u002528true\u002529,shares,message,id,created_time,from&limit=20&access_token=121584141274833|EzolJusCGWQEJt_mnLvlo7Jiz_Q&until=1413385867"}}'
+    http_version: 
+  recorded_at: Tue, 16 Dec 2014 16:54:41 GMT
+recorded_with: VCR 2.9.3

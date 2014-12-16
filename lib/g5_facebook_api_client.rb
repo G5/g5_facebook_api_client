@@ -1,6 +1,7 @@
 require "httparty"
 require "g5_facebook_api_client/base"
 require "g5_facebook_api_client/version"
+require "g5_facebook_api_client/page"
 require "g5_facebook_api_client/insights"
 require "g5_facebook_api_client/user"
 require "g5_facebook_api_client/access_token"

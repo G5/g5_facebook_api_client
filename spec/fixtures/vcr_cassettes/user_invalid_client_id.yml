@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/oauth/access_token?client_id=foo&client_secret=b0d3826624470f5f5c3e70ce70893ed4&grant_type=client_credentials
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "unknown_error" "An unknown error has occurred."
+      Facebook-Api-Version:
+      - v1.0
+      Content-Type:
+      - application/json; charset=UTF-8
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1532927'
+      Cache-Control:
+      - no-store
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - ld274SrecbAMTr3yq5bKqwwL+mHajfDlL0UHif/3lsPwKFBn7NmDh9mcN6BXEJjSPRkKkCrJtpAiF5LWTYugIQ==
+      Date:
+      - Tue, 16 Dec 2014 01:47:00 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '87'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"An unknown error has occurred.","type":"OAuthException","code":1}}'
+    http_version: 
+  recorded_at: Tue, 16 Dec 2014 01:47:01 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/oauth/access_token?client_id=foo&client_secret=b0d3826624470f5f5c3e70ce70893ed4&grant_type=client_credentials
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "unknown_error" "An unknown error has occurred."
+      Facebook-Api-Version:
+      - v1.0
+      Content-Type:
+      - application/json; charset=UTF-8
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1533836'
+      Cache-Control:
+      - no-store
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - qiexNFryymOhiwO71vYbaRlJg2A4xL1JDPLbiG1+Qkp3KavlscoLoqfKb0Fezu9H2WUNqLrs22kj7VmveIVTbQ==
+      Date:
+      - Tue, 16 Dec 2014 16:54:40 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '87'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"An unknown error has occurred.","type":"OAuthException","code":1}}'
+    http_version: 
+  recorded_at: Tue, 16 Dec 2014 16:54:41 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/GetG5/posts?fields=likes.limit(1).summary(true),shares,message,id,created_time,from&limit=20&%7B%22error%22:%7B%22message%22:%22An%20unknown%20error%20has%20occurred.%22,%22type%22:%22OAuthException%22,%22code%22:1%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "An access token is required to
+        request this resource."
+      Facebook-Api-Version:
+      - v1.0
+      Content-Type:
+      - application/json; charset=UTF-8
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1533836'
+      Cache-Control:
+      - no-store
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - SUt85RrYKGKuzxslU5ES6k+fuZWLIDkdLgjlDXDdkSpx0ek5uNPZxxhafrrED1tUf/gAu/PHUjQlVfHWV9SMzw==
+      Date:
+      - Tue, 16 Dec 2014 16:54:40 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '112'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"An access token is required to request this resource.","type":"OAuthException","code":104}}'
+    http_version: 
+  recorded_at: Tue, 16 Dec 2014 16:54:41 GMT
+recorded_with: VCR 2.9.3

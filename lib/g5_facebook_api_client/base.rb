@@ -4,8 +4,6 @@ class G5FacebookApiClient::Base
     @client_secret = client_secret || ENV["FACEBOOK_SECRET"]
   end
 
-  protected
-
   def access_token
     @access_token ||=
       G5FacebookApiClient::AccessToken.new(@client_id, @client_secret).fetch
@@ -17,6 +15,10 @@ class G5FacebookApiClient::Base
 
   def get(url)
     HTTParty.get(encode(url)).body
+  end
+
+  def post(url)
+    HTTParty.post(encode(url)).body
   end
 
   def encode(string)

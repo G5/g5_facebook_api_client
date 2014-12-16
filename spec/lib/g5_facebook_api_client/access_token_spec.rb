@@ -20,7 +20,7 @@ describe G5FacebookApiClient::AccessToken do
     context "invalid client_id param" do
       let(:client_id) { "foo" }
 
-      it "fetches an access token for a client" do
+      it "it explodes with an oauth error" do
         VCR.use_cassette("access_token_invalid_client_id") do
           expect(subject).to include("OAuthException")
         end
@@ -30,7 +30,7 @@ describe G5FacebookApiClient::AccessToken do
     context "invalid client_id param" do
       let(:client_secret) { "bar" }
 
-      it "fetches an access token for a client" do
+      it "it explodes with an oauth error" do
         VCR.use_cassette("access_token_invalid_client_secret") do
           expect(subject).to include("OAuthException")
         end
